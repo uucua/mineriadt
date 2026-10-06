@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salud, desarrollo y emisiones · 2023</title>
+<style>
+:root { color-scheme: light; --tinta: #202d39; --gris: #5e6a74; --linea: #dce1e4; --azul: #234d67; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #f5f6f6; color: var(--tinta); font-family: Arial, Helvetica, sans-serif; line-height: 1.55; }
+.contenedor { max-width: 1240px; margin: auto; padding: 0 36px; }
+header { background: white; border-top: 5px solid var(--azul); border-bottom: 1px solid var(--linea); padding: 38px 0 28px; }
+.encabezado { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+.etiqueta { margin: 0 0 12px; color: var(--azul); font-size: 12px; font-weight: bold; letter-spacing: 1.5px; text-transform: uppercase; }
+h1 { margin: 0; font-family: Georgia, serif; font-size: clamp(30px, 4vw, 44px); line-height: 1.15; font-weight: normal; }
+.subtitulo { color: var(--gris); margin: 14px 0 0; max-width: 690px; }
+.periodo { min-width: 100px; border-left: 1px solid var(--linea); padding-left: 24px; color: var(--gris); font-size: 12px; }
+.periodo strong { display: block; font-size: 30px; color: var(--tinta); font-weight: normal; }
+nav { display: flex; gap: 24px; margin-top: 24px; font-size: 14px; }
+a { color: var(--azul); text-underline-offset: 4px; }
+nav a { text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+a:focus-visible { outline: 3px solid var(--azul); outline-offset: 4px; }
+.indicadores { display: grid; grid-template-columns: repeat(4, 1fr); padding: 25px 0; margin: 0; border-bottom: 1px solid var(--linea); }
+.indicador { padding: 0 22px; border-right: 1px solid var(--linea); }
+.indicador:first-child { padding-left: 0; }
+.indicador:last-child { border: 0; }
+dt { color: var(--gris); font-size: 13px; }
+dd { margin: 6px 0; font-size: 29px; font-variant-numeric: tabular-nums; }
+.indicador p { font-size: 11px; margin: 0; color: var(--gris); }
+section { padding: 32px 0; }
+.seccion-titulo { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 18px; }
+h2 { margin: 0; font-size: 21px; font-weight: normal; }
+.seccion-titulo p { margin: 0; font-size: 12px; color: var(--gris); }
+.figuras { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+figure { margin: 0; border: 1px solid var(--linea); background: white; }
+figcaption { display: flex; gap: 14px; padding: 20px 20px 8px; }
+.numero { color: var(--azul); font-size: 12px; padding-top: 4px; }
+h3 { margin: 0; font-size: 17px; font-weight: normal; }
+figcaption p { margin: 7px 0 0; color: var(--gris); font-size: 12px; }
+figure a { display: block; padding: 8px; }
+img { display: block; width: 100%; height: auto; }
+.resultados { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; border-top: 1px solid var(--linea); }
+.resultados h2 { margin-bottom: 16px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+caption { text-align: left; color: var(--gris); margin-bottom: 12px; font-size: 12px; }
+th { text-align: left; font-weight: normal; color: var(--gris); font-size: 12px; }
+th, td { padding: 11px 0; border-bottom: 1px solid var(--linea); }
+th:last-child, td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+.metodo p { color: var(--gris); font-size: 14px; margin: 0 0 14px; }
+footer { border-top: 1px solid var(--linea); padding: 20px 0 30px; color: var(--gris); font-size: 12px; }
+@media (max-width: 850px) { .figuras, .resultados { grid-template-columns: 1fr; } .indicadores { grid-template-columns: 1fr 1fr; gap: 24px 0; } .indicador:nth-child(3) { padding-left: 0; } .indicador:nth-child(2) { border: 0; } }
+@media (max-width: 480px) { .contenedor { padding: 0 18px; } .encabezado { flex-direction: column; } .periodo { border: 0; padding: 0; } .seccion-titulo { display: block; } dd { font-size: 24px; } nav { gap: 18px; } }
+@media print { body { background: white; } nav { display: none; } .contenedor { padding: 0; } figure, .resultados { break-inside: avoid; } .figuras { gap: 12px; } }
+</style>
+</head>
+<body>
+<header><div class="contenedor">
+<div class="encabezado"><div><p class="etiqueta">Minería de datos · Informe de resultados</p><h1>Salud, desarrollo y emisiones</h1><p class="subtitulo">Una comparación de la esperanza de vida, el PIB y las emisiones de CO₂ por habitante entre países y territorios.</p></div><div class="periodo">Año de análisis<strong>2023</strong></div></div>
+<nav aria-label="Secciones del informe"><a href="#figuras">Gráficos</a><a href="#resultados">Resultados</a><a href="#metodo">Metodología</a></nav>
+</div></header>
+<main class="contenedor">
+<dl class="indicadores" aria-label="Indicadores del año"><div class="indicador"><dt>Países y territorios</dt><dd>194</dd><p>Con datos en las tres fuentes</p></div><div class="indicador"><dt>Esperanza de vida</dt><dd>73,3 años</dd><p>Promedio entre países</p></div><div class="indicador"><dt>PIB por habitante</dt><dd>17.069</dd><p>Mediana · unidades del archivo fuente</p></div><div class="indicador"><dt>CO₂ por habitante</dt><dd>3,12</dd><p>Mediana · unidades del archivo fuente</p></div></dl>
+<section id="figuras"><div class="seccion-titulo"><h2>Comparación visual</h2><p>Selecciona una figura para abrirla en tamaño completo.</p></div><div class="figuras"><figure>
+            <figcaption><span class="numero">01</span><div><h3>Desarrollo y esperanza de vida</h3><p>El color representa las emisiones de CO₂ por habitante. El PIB se presenta en escala logarítmica.</p></div></figcaption>
+            <a href="../figures/dispersion_2023.png" target="_blank" rel="noopener" aria-label="Ampliar: Desarrollo y esperanza de vida">
+                <img src="../figures/dispersion_2023.png" alt="Desarrollo y esperanza de vida. El color representa las emisiones de CO₂ por habitante. El PIB se presenta en escala logarítmica.">
+            </a>
+        </figure><figure>
+            <figcaption><span class="numero">02</span><div><h3>Distribución de la esperanza de vida</h3><p>Cantidad de países y territorios en cada intervalo de esperanza de vida.</p></div></figcaption>
+            <a href="../figures/histograma_2023.png" target="_blank" rel="noopener" aria-label="Ampliar: Distribución de la esperanza de vida">
+                <img src="../figures/histograma_2023.png" alt="Distribución de la esperanza de vida. Cantidad de países y territorios en cada intervalo de esperanza de vida.">
+            </a>
+        </figure><figure>
+            <figcaption><span class="numero">03</span><div><h3>Diferencias entre regiones</h3><p>Las cajas muestran la mediana y la dispersión de la esperanza de vida de cada región.</p></div></figcaption>
+            <a href="../figures/regiones_2023.png" target="_blank" rel="noopener" aria-label="Ampliar: Diferencias entre regiones">
+                <img src="../figures/regiones_2023.png" alt="Diferencias entre regiones. Las cajas muestran la mediana y la dispersión de la esperanza de vida de cada región.">
+            </a>
+        </figure><figure>
+            <figcaption><span class="numero">04</span><div><h3>Evolución en cuatro países</h3><p>Chile, Argentina, Brasil y Perú, desde 1990 hasta 2023.</p></div></figcaption>
+            <a href="../figures/evolucion_2023.png" target="_blank" rel="noopener" aria-label="Ampliar: Evolución en cuatro países">
+                <img src="../figures/evolucion_2023.png" alt="Evolución en cuatro países. Chile, Argentina, Brasil y Perú, desde 1990 hasta 2023.">
+            </a>
+        </figure></div></section>
+<section class="resultados" id="resultados">
+<div><h2>Mayor esperanza de vida</h2><table><caption>Cinco países y territorios de la muestra · 2023</caption><thead><tr><th scope="col">País o territorio</th><th scope="col">Región</th><th scope="col">Esperanza de vida</th></tr></thead><tbody><tr><td>Hong Kong</td><td>Asia</td><td>85,5 años</td></tr><tr><td>Japan</td><td>Asia</td><td>84,7 años</td></tr><tr><td>South Korea</td><td>Asia</td><td>84,3 años</td></tr><tr><td>Andorra</td><td>Europe</td><td>84,0 años</td></tr><tr><td>Switzerland</td><td>Europe</td><td>84,0 años</td></tr></tbody></table></div>
+<div class="metodo" id="metodo"><h2>Lectura de los resultados</h2><p>La correlación entre PIB por habitante y esperanza de vida es <strong>0,74</strong>. Describe una asociación entre ambas variables en esta muestra; no demuestra una relación causal.</p><p>La muestra conserva las coincidencias de país, código y año entre las tres fuentes. Los indicadores resumen países y territorios sin ponderar por población.</p><p>En la limpieza, si los valores inválidos o nulos superan el 5 %, se completan con el promedio de la fuente; con 5 % o menos, se eliminan las filas afectadas.</p><p>La evolución histórica usa los datos de esperanza de vida desde 1990. Los demás gráficos corresponden a 2023.</p></div>
+</section>
+</main>
+<footer><div class="contenedor">Fuentes: archivos de Our World in Data y Banco Mundial utilizados en el proyecto. Las unidades de PIB y CO₂ se conservan según las fuentes originales.</div></footer>
+</body>
+</html>
